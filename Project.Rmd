@@ -78,34 +78,11 @@ $$
 \end{array}
 $$
 
-<!--### Feature selection-->
-<!To see whether there exists multicollinearity between the explanatory variables,
-we calculated the correlation matrix and from the output below we can see that
-there exists moderate to strong correlation between some of the explanatory variables.>
-
-<!```{r,echo=FALSE}
-library(knitr)
-source
-('machine_learning_project_code.R')
-```>
-
-<!```{r echo=TRUE}
-sum(cor(training.new[,1:30],training.new[,31:54])[,]>0.5)
-sum(cor(training.new[,1:30],training.new[,31:54])[,]>0.7)
-sum(cor(training.new[,1:30],training.new[,31:54])[,]>0.8)
-sum(cor(training.new[,1:30],training.new[,31:54])[,]>0.82)
-```>
-
-<!We will conduct the principal component analysis here to remove the multicollinearity.>
 
 ##Model building
 
 We selected random forest as our prediction methods. And we used repeated K-fold cross validation. Here $k=10$ and the number of repetition is set to be 3. The output for the random forest is as follows: 
 
-<!```{r, echo=FALSE, cache=FALSE}
-library(knitr)
-source ('machine_learning_project_code.R')
-```>
 ```{r, echo=FALSE}
 library(knitr)
 #read in testing and training data
