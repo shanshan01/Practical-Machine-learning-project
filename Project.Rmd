@@ -199,5 +199,7 @@ testing.20<-data.frame(testing.20)
 pred.20<-predict(model,testing.20)
 pred.20
 ```
-
+Based on the prediction accuracy on the validation dataset,
+we expect the prediction error for the test dataset be small,
+(i.e., less than 0.01).
 
